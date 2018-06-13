@@ -1,4 +1,4 @@
-'''Majority of the code here is adapted from https://github.com/experiencor/keras-yolo3'''
+'''Parts of the code here is adapted from https://github.com/experiencor/keras-yolo3'''
 
 from keras.layers import Conv2D, Input, Activation,BatchNormalization,LeakyReLU, ZeroPadding2D, UpSampling2D, Lambda,SeparableConv2D,DepthwiseConv2D
 from keras.layers.merge import add, concatenate
