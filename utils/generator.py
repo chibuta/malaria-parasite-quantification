@@ -1,3 +1,4 @@
+''' Some parts of the code are adpated from https://github.com/experiencor/keras-yolo3'''
 import cv2
 import copy
 import numpy as np
@@ -38,8 +39,9 @@ class create_batch(Sequence):
 
         self.aug                = True
         
+        #Augment using imaug pipeline https://github.com/aleju/imgaug
         sometimes = lambda aug: iaa.Sometimes(0.5, aug)
-
+        
         # Define our sequence of augmentation steps that will be applied to every image
         # All augmenters with per_channel=0.5 will sample one value _per image_
         # in 50% of all cases. In all other cases they will sample new values
